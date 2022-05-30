@@ -43,6 +43,11 @@ app.get('/', function(req,res){
                 PRIMARY KEY (idUsuario)
                 
             );`
+            connect.query(query, function(err, result){
+                if(err) throw err;
+                
+        
+            });
 
             res.send('ok')
         };
