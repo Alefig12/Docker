@@ -4,7 +4,8 @@ services:
     build:
       context: .
     restart: unless-stopped
-    depends_on: mysql
+    depends_on:
+      - mysql
     ports:
       - 8000:8000  
     environment:
