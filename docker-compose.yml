@@ -13,7 +13,7 @@ services:
       - DB_PASSWORD=root
       - DB_NAME=users
       - DB_USER=root
-      - DB_PORT=3000  
+      - DB_PORT=3306 
     tty: true
   mysql:
     image: mysql:5.7
