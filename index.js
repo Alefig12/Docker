@@ -25,11 +25,15 @@ app.get('/', function(req,res){
 
 
     connect.connect(function(err){
-        if(err) res.send("nok");
-
-        console.log("Conexion establecida con la base de datos")
+        if(err) res.send("nok")
         
-        res.send('ok')
+        else {
+            console.log("Conexion establecida con la base de datos")
+
+            res.send('ok')
+        };
+
+
     })
 })
 
