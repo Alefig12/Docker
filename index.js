@@ -33,16 +33,7 @@ app.get('/', function(req,res){
         else {
             console.log("Conexion establecida con la base de datoss")
 
-            query = `use users;
-
-            create table usuario (
-                idUsuario INT NOT NULL AUTO_INCREMENT,
-                nombreDeUsuario VARCHAR(20) NOT NULL,
-                clave VARCHAR(50) NOT NULL ,
-                idEvento VARCHAR(50) NOT NULL,
-                PRIMARY KEY (idUsuario)
-                
-            );`
+            query = `create table IF NOT EXISTS usuario (idUsuario INT NOT NULL AUTO_INCREMENT,nombreDeUsuario VARCHAR(20) NOT NULL,clave VARCHAR(50) NOT NULL ,idEvento VARCHAR(50) NOT NULL,PRIMARY KEY (idUsuario));`
             connect.query(query, function(err, result){
                 if(err) throw err;
                 
