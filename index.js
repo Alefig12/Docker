@@ -95,8 +95,8 @@ app.post('/login', function(req,res){
         connect.query(query, function(err, result){
             if(err) throw err;
 
-            
-            res.send(Object.values(result[0])); 
+            else{ res.send(Object.values(result[0])); }
+           
         });   
     });
     
