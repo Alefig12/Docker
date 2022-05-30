@@ -9,7 +9,7 @@ services:
     ports:
       - 8000:8000  
     environment:
-      - DB_HOST=localhost
+      - DB_HOST=nodejs
       - DB_PASSWORD=root
       - DB_NAME=users
       - DB_USER=root
