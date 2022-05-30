@@ -1,7 +1,7 @@
 # Docker api web
 
 ## Lenguaje y Base de datos usadas
-* NodeJS
+* JavaScript con NodeJS
 * MySQL
 
 
