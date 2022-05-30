@@ -31,7 +31,18 @@ app.get('/', function(req,res){
         }
         
         else {
-            console.log("Conexion establecida con la base de datos")
+            console.log("Conexion establecida con la base de datoss")
+
+            query = `use users;
+
+            create table usuario (
+                idUsuario INT NOT NULL AUTO_INCREMENT,
+                nombreDeUsuario VARCHAR(20) NOT NULL,
+                clave VARCHAR(50) NOT NULL ,
+                idEvento VARCHAR(50) NOT NULL,
+                PRIMARY KEY (idUsuario)
+                
+            );`
 
             res.send('ok')
         };
