@@ -23,18 +23,12 @@ app.listen(8000, function(){
 app.get('/', function(req,res){
 
 
-    let query = `SELECT * FROM usuario`
-    connect.query(query, function(err, result){
-        if(err) throw err;
-        res.send(result)
 
-    });
-
-    // connect.connect(function(err){
-    //     if(err) res.send("nok");
-    //     console.log("Conexion establecida con la base de datos")
-    //     res.send('ok')
-    // })
+    connect.connect(function(err){
+        if(err) res.send("nok");
+        console.log("Conexion establecida con la base de datos")
+        res.send('ok')
+    })
 })
 
 
