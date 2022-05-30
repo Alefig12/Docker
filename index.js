@@ -68,10 +68,11 @@ app.post('/', function(req,res){
                 
         
             });
+
             res.send('ok')
         } 
-
-        res.send('nok')
+        else{res.send('nok')}
+        
         
     });
     
