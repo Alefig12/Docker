@@ -89,15 +89,19 @@ app.post('/login', function(req,res){
         if(err) throw err;
         if (!result.length) {
             res.send('nok')
-        } 
+        } else {
 
         query = `SELECT idUsuario FROM usuario WHERE nombreDeUsuario = ${nombreDeUsuario} and clave = ${clave} and idEvento = ${idEvento}`
         connect.query(query, function(err, result){
-            if(err) throw err;
+            if(err){
+                throw err;
+            } 
 
-            else{ res.send(Object.values(result[0])); }
+            
+            res.send(Object.values(result[0])); 
            
-        });   
+        }); 
+        }  
     });
     
 })
